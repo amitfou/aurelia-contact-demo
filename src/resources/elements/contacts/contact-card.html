@@ -1,0 +1,10 @@
+<template bindable="contact">
+<require from="../../value-converters/converters"></require>
+<img  gravatar="${contact.emailAddress}"/>
+<div class="card-container">
+    <h4><b>${contact.firstName} ${contact.lastName}</b></h4> 
+    <p>${contact.emailAddress}</p>
+    <p>${contact.phoneNumber}</p> 
+    <p>created on: ${contact.createdOn | dateFormat:'M/D/YYYY h:mm:ss a'}</p> 
+  </div>
+</template>
